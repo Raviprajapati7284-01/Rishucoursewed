@@ -1,55 +1,250 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI Mastery Program</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ravi Kumar Prajapati</title>
+
 <style>
-:root{--navy:#060a1d;--blue:#225cff;--gold:#ffd32a;--purple:#7a24c9;--pink:#ed0058;--text:#f5f7ff;--muted:#aeb8d5}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--navy);color:var(--text)}html{scroll-behavior:smooth}
-.container{width:min(1180px,92%);margin:auto}nav{position:sticky;top:0;background:#060a1de8;backdrop-filter:blur(12px);z-index:9;border-bottom:1px solid #ffffff1f}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:900}.logo span{color:var(--gold)}.links{display:flex;gap:20px}.links a{color:#fff;text-decoration:none}
-.btn{display:inline-block;padding:14px 23px;border-radius:12px;font-weight:800;text-decoration:none;border:0;cursor:pointer}.gold{background:linear-gradient(135deg,var(--gold),#ff9500);color:#111}.blue{background:linear-gradient(135deg,#2466ff,#8127d8);color:#fff}
-.hero{padding:80px 0;background:radial-gradient(circle at 15% 20%,#1555ff45,transparent 28%),radial-gradient(circle at 85% 30%,#7b28ff42,transparent 25%)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.tag{display:inline-block;padding:9px 15px;border:1px solid #24d8ff;border-radius:30px;color:#8deaff;font-weight:bold}.hero h1{font-size:clamp(50px,7vw,86px);line-height:.9;margin:20px 0}.mastery{color:var(--gold)}.hero p{color:var(--muted);font-size:18px;line-height:1.6}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.ai-card{min-height:390px;border:1px solid #407aff;border-radius:28px;padding:28px;background:linear-gradient(145deg,#121b47,#070b20);position:relative;overflow:hidden}.orb{position:absolute;right:-25px;top:-25px;width:230px;height:230px;border-radius:50%;border:2px solid #2478ff;box-shadow:0 0 55px #1d4cff,inset 0 0 55px #1d4cff;display:grid;place-items:center;font-size:72px;font-weight:900;color:#9ccaff}.ai-card h2{font-size:34px}.mini-grid{position:absolute;bottom:28px;left:28px;right:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{padding:15px 8px;background:#121b42;border:1px solid #ffffff18;border-radius:12px;text-align:center;font-weight:bold;font-size:13px}
-section{padding:75px 0}.title{text-align:center;margin-bottom:35px}.title h2{font-size:42px;margin:0}.title p{color:var(--muted)}.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill{padding:24px;border:1px solid #ffffff20;border-radius:18px;background:linear-gradient(145deg,#121b40,#080c20);transition:.25s}.skill:hover{transform:translateY(-5px);border-color:var(--gold)}.skill .i{font-size:34px}.skill p{color:var(--muted);font-size:14px}
-.fees{background:#f5f6fc;color:#11182e}.fees .title p{color:#59627b}.fee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.fee{background:white;border:1px solid #d7dcec;border-radius:17px;overflow:hidden;box-shadow:0 8px 22px #12255c18}.head{padding:14px;text-align:center;color:#fff;font-weight:900;background:#24438e}.fee:nth-child(1) .head{background:#08613d}.fee:nth-child(3) .head{background:#6b20af}.fee:nth-child(4) .head{background:var(--pink)}.body{padding:25px;text-align:center}.old{text-decoration:line-through;font-size:29px;font-weight:800}.price{font-size:55px;font-weight:900;color:#183478;margin:6px}.green{color:#087337}.small{font-size:13px;color:#566078;font-weight:bold}
-.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:18px}.info{background:white;border:1px solid #d7dcec;border-radius:17px;padding:20px}.info h3{margin-top:0}.pay{font-size:40px;font-weight:900;color:#12672d}.discount{background:#087337;color:white;padding:8px 12px;border-radius:8px;font-weight:bold}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid #dde1ee;text-align:left;font-size:13px}th{background:#edf1fa}.included div{padding:7px 0;font-weight:bold}.check{color:#0caa5a}
-.feature-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.feature{background:#0e1535;border:1px solid #ffffff1c;padding:20px 8px;text-align:center;border-radius:14px;font-size:13px;font-weight:bold}.feature b{display:block;font-size:28px;margin-bottom:8px}
-.trainer{display:grid;grid-template-columns:250px 1fr;gap:35px;align-items:center;padding:35px;border-radius:26px;background:linear-gradient(135deg,#10183c,#27104c);border:1px solid #ffffff25}.photo{height:220px;width:220px;margin:auto;border-radius:50%;background:radial-gradient(circle at 50% 30%,#f2c29d,#5c3828 40%,#080d20 41%);display:grid;place-items:end;font-size:90px}.trainer h2{font-size:42px;margin:0}.trainer p{color:var(--muted);line-height:1.7}
-.offer{margin:20px auto 0;padding:35px;text-align:center;border-radius:24px;background:linear-gradient(100deg,#e6003d,#ff7b00)}.offer h2{font-size:42px;margin:0}.offer .big{font-size:58px;font-weight:900}
-.register{text-align:center}.form{max-width:650px;margin:25px auto;background:#101735;padding:28px;border-radius:22px;border:1px solid #ffffff20}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}input{width:100%;padding:15px;margin-bottom:12px;border-radius:10px;border:1px solid #2a3968;background:#080d20;color:white}.form button{width:100%;font-size:16px}.phone{font-size:34px;font-weight:900;color:var(--gold)}
-.contact-actions{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
-.contact-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:800;font-size:16px;transition:.25s}
-.contact-btn:hover{transform:translateY(-3px)}
-.call-btn{background:#2466ff;color:#fff}
-.whatsapp-btn{background:#20c863;color:#fff}
-footer{background:#03050d;text-align:center;padding:30px;color:#aeb7d0}
-.toast{display:none;position:fixed;right:20px;bottom:20px;background:#0d6b3d;padding:15px 20px;border-radius:10px;z-index:99}
-@media(max-width:900px){.links{display:none}.hero-grid,.trainer{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.fee-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}.feature-row{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.skills,.fee-grid{grid-template-columns:1fr}.feature-row{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.title h2{font-size:31px}}
-</style></head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050816;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+}
+
+/* Animated background */
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:linear-gradient(135deg,#225cff,#7a24c9,#ed0058);
+    filter:blur(120px);
+    opacity:.35;
+    animation:move 8s infinite alternate ease-in-out;
+}
+
+@keyframes move{
+    0%{
+        transform:translate(-200px,-100px);
+    }
+    100%{
+        transform:translate(200px,120px);
+    }
+}
+
+/* Poster */
+.poster{
+    position:relative;
+    width:min(900px,90%);
+    padding:70px 50px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    background:rgba(8,12,35,.78);
+    backdrop-filter:blur(20px);
+    box-shadow:0 30px 100px rgba(0,0,0,.5);
+    overflow:hidden;
+}
+
+/* Border glow */
+.poster::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:30px;
+    padding:2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #225cff,
+        #ed0058,
+        #ffd32a,
+        transparent
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    animation:borderMove 5s linear infinite;
+}
+
+@keyframes borderMove{
+    0%{transform:translateX(-30%);}
+    100%{transform:translateX(30%);}
+}
+
+.small{
+    position:relative;
+    color:#ffd32a;
+    font-size:15px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+h1{
+    position:relative;
+    font-size:clamp(45px,8vw,90px);
+    line-height:1;
+    font-weight:900;
+    letter-spacing:-3px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #65a0ff,
+        #ffffff,
+        #ff4d9d
+    );
+
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:textMove 5s infinite linear;
+}
+
+@keyframes textMove{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+.role{
+    position:relative;
+    margin-top:25px;
+    font-size:22px;
+    color:#aeb8d8;
+    letter-spacing:3px;
+}
+
+.line{
+    position:relative;
+    width:100px;
+    height:3px;
+    margin:30px auto;
+    background:linear-gradient(90deg,#225cff,#ed0058);
+    border-radius:10px;
+}
+
+.description{
+    position:relative;
+    max-width:650px;
+    margin:auto;
+    color:#d7dcf0;
+    font-size:17px;
+    line-height:1.7;
+}
+
+.skills{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:35px;
+}
+
+.skill{
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    color:#fff;
+    background:rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+    background:rgba(34,92,255,.25);
+    border-color:#225cff;
+}
+
+.footer{
+    position:relative;
+    margin-top:40px;
+    color:#7f8aaa;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* Floating particles */
+.particle{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:#fff;
+    border-radius:50%;
+    opacity:.4;
+    animation:float 6s infinite ease-in-out;
+}
+
+.p1{left:10%;top:20%;}
+.p2{left:85%;top:25%;animation-delay:1s;}
+.p3{left:20%;top:80%;animation-delay:2s;}
+.p4{left:75%;top:75%;animation-delay:3s;}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+        opacity:.2;
+    }
+    50%{
+        transform:translateY(-30px);
+        opacity:.8;
+    }
+}
+</style>
+</head>
+
 <body>
-<nav><div class="container nav"><div class="logo">AI <span>MASTERY</span> PROGRAM</div><div class="links"><a href="#courses">Courses</a><a href="#fees">Fees</a><a href="#trainer">Trainer</a></div><a class="btn gold" href="https://docs.google.com/forms/d/e/1FAIpQLSesdKWiHu8fZ94u2dM2k0cYCzaycrjGXbdLbQQZaGvEnjxH-A/viewform?usp=header" target="_blank" rel="noopener">REGISTER NOW</a></div></nav>
-<header class="hero"><div class="container hero-grid"><div><span class="tag">🤖 FUTURE-READY AI SKILLS</span><h1>AI <span class="mastery">MASTERY</span><br>PROGRAM</h1><h3>LEARN • PRACTICE • BUILD • EARN</h3><p>AI tools, practical projects, YouTube training, creative skills and career-focused learning in one powerful program.</p><div class="actions"><a class="btn gold" href="https://docs.google.com/forms/d/e/1FAIpQLSesdKWiHu8fZ94u2dM2k0cYCzaycrjGXbdLbQQZaGvEnjxH-A/viewform?usp=header" target="_blank" rel="noopener">🔥 REGISTER TODAY</a><a class="btn blue" href="#fees">VIEW FEES</a></div></div><div class="ai-card"><div class="orb">AI</div><h2>Build Your Future 🚀</h2><p>Learn practical AI and digital skills.</p><div class="mini-grid"><div class="mini">🤖 AI Tools</div><div class="mini">🎬 Editing</div><div class="mini">🎨 Design</div><div class="mini">▶ YouTube</div><div class="mini">👤 Branding</div><div class="mini">💼 Career</div></div></div></div></header>
-<section id="courses"><div class="container"><div class="title"><h2>🔥 WHAT WILL YOU LEARN?</h2><p>Modern skills with practical learning.</p></div><div class="skills"><div class="skill"><div class="i">🤖</div><h3>AI Basic to Advanced</h3><p>Useful AI tools and workflows.</p></div><div class="skill"><div class="i">🎬</div><h3>Basic Video Editing</h3><p>Create smarter video content.</p></div><div class="skill"><div class="i">🎨</div><h3>Graphic Designing</h3><p>Create attractive visual content.</p></div><div class="skill"><div class="i">👤</div><h3>Personal Branding</h3><p>Build your digital identity.</p></div><div class="skill"><div class="i">▶️</div><h3>YouTube Training</h3><p>Content and channel learning.</p></div><div class="skill"><div class="i">🛠️</div><h3>Practical Projects</h3><p>Practice with projects.</p></div><div class="skill"><div class="i">📈</div><h3>Skill Growth</h3><p>Professional skill development.</p></div><div class="skill"><div class="i">🚀</div><h3>20+ More Skills</h3><p>Explore more digital modules.</p></div></div></div></section>
-<section class="fees" id="fees"><div class="container"><div class="title"><h2>★ FEE STRUCTURE ★</h2><p>6 MONTHS COURSE + 2 MONTHS PRACTICAL</p></div><div class="fee-grid"><div class="fee"><div class="head">ADMISSION / REGISTRATION FEE</div><div class="body"><div class="price green">₹0</div><div class="small">NO ADMISSION FEE</div></div></div><div class="fee"><div class="head">MONTHLY FEE</div><div class="body"><div class="old">₹999</div><div class="price">₹499</div><div class="small">PER MONTH • 50% DISCOUNT</div></div></div><div class="fee"><div class="head">FULL COURSE FEE</div><div class="body"><div class="old">₹5,900</div><div class="price" style="color:#651a9d">₹2,950</div><div class="small">FOR 6 MONTHS • 50% DISCOUNT</div></div></div><div class="fee"><div class="head">PRACTICAL MODULE FEE</div><div class="body"><div class="price" style="color:#e50050">₹0</div><div class="small">INCLUDED IN COURSE<br>NO EXTRA CHARGES</div></div></div></div>
-<div class="info-grid"><div class="info"><h3>🏅 ONE-TIME FULL PAYMENT</h3><p>Full Course Fee: ₹2,950</p><span class="discount">₹500 OFF</span><div class="pay">₹2,450</div><div class="small">ONE-TIME PAYMENT BENEFIT</div></div><div class="info"><h3>INSTALLMENT OPTIONS</h3><table><tr><th>Option</th><th>Duration</th><th>Amount</th></tr><tr><td>Monthly Plan</td><td>6 Months</td><td>₹499 / Month</td></tr><tr><td>3 Month Plan</td><td>3 Months</td><td>₹1,575 / Month</td></tr><tr><td>Full Payment</td><td>One-Time</td><td>₹2,450</td></tr></table></div><div class="info"><h3>WHAT'S INCLUDED?</h3><div class="included"><div><span class="check">✓</span> Live Classes</div><div><span class="check">✓</span> YouTube Training</div><div><span class="check">✓</span> Practical Projects</div><div><span class="check">✓</span> Mentor Support</div><div><span class="check">✓</span> Study Material</div><div><span class="check">✓</span> Doubt Sessions</div><div><span class="check">✓</span> Certificate of Completion</div></div></div></div></div></section>
-<section><div class="container feature-row"><div class="feature"><b>🎓</b>PROFESSIONAL<br>SKILLS</div><div class="feature"><b>📈</b>PRACTICAL<br>EXPERIENCE</div><div class="feature"><b>🌱</b>PERSONAL<br>GROWTH</div><div class="feature"><b>💼</b>CAREER<br>OPPORTUNITIES</div><div class="feature"><b>💰</b>EARN<br>ONLINE</div><div class="feature"><b>🎯</b>FINANCIAL<br>FREEDOM</div></div></section>
-<section id="trainer"><div class="container trainer"><div class="photo">👨‍🏫</div><div><span class="tag">YOUR MENTOR</span><h2>Rishu Mishra</h2><h3>AI Trainer & Mentor</h3><p>Learn with a practical approach focused on modern AI skills, creative tools, projects and future-ready opportunities.</p><a class="btn gold" href="https://docs.google.com/forms/d/e/1FAIpQLSesdKWiHu8fZ94u2dM2k0cYCzaycrjGXbdLbQQZaGvEnjxH-A/viewform?usp=header" target="_blank" rel="noopener">START YOUR JOURNEY</a></div></div></section>
-<div class="container"><div class="offer"><h2>🔥 LIMITED TIME OFFER 🔥</h2><div>Regular Fee: <s>₹999</s></div><div class="big">₹499</div><div>50% OFF • REGISTER TODAY</div></div></div>
-<section class="register" id="register"><div class="container">
-<div class="title"><h2>Ready to Build Your Future with AI? 🚀</h2><p>Register today and start your journey.</p></div>
-<div class="form">
-<h3 style="font-size:28px;margin-top:0">AI MASTERY PROGRAM REGISTRATION</h3>
-<p style="color:var(--muted);line-height:1.6">Click the button below to complete your registration securely through our official Google Form.</p>
-<a class="btn gold" style="margin:15px 0;font-size:17px" href="https://docs.google.com/forms/d/e/1FAIpQLSesdKWiHu8fZ94u2dM2k0cYCzaycrjGXbdLbQQZaGvEnjxH-A/viewform?usp=header" target="_blank" rel="noopener">🔥 REGISTER NOW</a>
-<p>FOR ADMISSION & ENQUIRY</p><div class="phone">📞 7398803884</div>
-<div class="contact-actions">
-  <a class="contact-btn call-btn" href="tel:+917398803884">📞 Call Now</a>
-  <a class="contact-btn whatsapp-btn" href="https://wa.me/917398803884" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <!DOCTYPE html>
+
+<div class="particle p1"></div>
+<div class="particle p2"></div>
+<div class="particle p3"></div>
+<div class="particle p4"></div>
+
+<div class="poster">
+
+    <div class="small">Creative Portfolio</div>
+
+    <h1>Ravi Kumar<br>Prajapati</h1>
+
+    <div class="role">
+        VIDEO EDITOR • GRAPHIC DESIGNER
+    </div>
+
+    <div class="line"></div>
+
+    <div class="description">
+        Turning creative ideas into powerful visuals,
+        engaging motion graphics and memorable digital experiences.
+    </div>
+
+    <div class="skills">
+        <div class="skill">Motion Graphics</div>
+        <div class="skill">Video Editing</div>
+        <div class="skill">Graphic Design</div>
+        <div class="skill">Creative Visuals</div>
+    </div>
+
+    <div class="footer">
+        CREATE • DESIGN • EDIT • IMPACT
+    </div>
+
 </div>
 
 </body>
 </html>
-</div>
-</div></div></section>
-<footer><b>AI MASTERY PROGRAM</b><p>LEARN • PRACTICE • BUILD • EARN</p><p>Mahuli Mahuariya Station, Adarsh Inter College</p></footer><div class="toast" id="toast">✅ Registration submitted successfully!</div>
-
-</body></html>
