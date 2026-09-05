@@ -24,27 +24,15 @@ footer{background:#03050d;text-align:center;padding:30px;color:#aeb7d0}
 .toast{display:none;position:fixed;right:20px;bottom:20px;background:#0d6b3d;padding:15px 20px;border-radius:10px;z-index:99}
 @media(max-width:900px){.links{display:none}.hero-grid,.trainer{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.fee-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}.feature-row{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.skills,.fee-grid{grid-template-columns:1fr}.feature-row{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.title h2{font-size:31px}}
 
-/* ===== Ravi Kumar Prajapati Poster ===== */
-.ravi-poster-wrap{position:relative;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:90px 20px;overflow:hidden;background:#050816}
-.ravi-poster-wrap::before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:linear-gradient(135deg,#225cff,#7a24c9,#ed0058);filter:blur(120px);opacity:.35;animation:raviBgMove 8s infinite alternate ease-in-out}
-@keyframes raviBgMove{0%{transform:translate(-200px,-100px)}100%{transform:translate(200px,120px)}}
-.ravi-poster{position:relative;z-index:1;width:min(900px,90%);padding:70px 50px;text-align:center;border:1px solid rgba(255,255,255,.15);border-radius:30px;background:rgba(8,12,35,.78);backdrop-filter:blur(20px);box-shadow:0 30px 100px rgba(0,0,0,.5);overflow:hidden}
-.ravi-poster::before{content:"";position:absolute;inset:-2px;border-radius:30px;padding:2px;background:linear-gradient(90deg,transparent,#225cff,#ed0058,#ffd32a,transparent);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:raviBorderMove 5s linear infinite}
-@keyframes raviBorderMove{0%{transform:translateX(-30%)}100%{transform:translateX(30%)}}
-.ravi-small{position:relative;color:#ffd32a;font-size:15px;letter-spacing:5px;text-transform:uppercase;margin-bottom:20px}
-.ravi-name{position:relative;font-size:clamp(45px,8vw,90px);line-height:1;font-weight:900;letter-spacing:-3px;background:linear-gradient(90deg,#fff,#65a0ff,#fff,#ff4d9d);background-size:300%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:raviTextMove 5s infinite linear}
-@keyframes raviTextMove{0%{background-position:0%}100%{background-position:300%}}
-.ravi-role{position:relative;margin-top:25px;font-size:22px;color:#aeb8d8;letter-spacing:3px}
-.ravi-line{position:relative;width:100px;height:3px;margin:30px auto;background:linear-gradient(90deg,#225cff,#ed0058);border-radius:10px}
-.ravi-description{position:relative;max-width:650px;margin:auto;color:#d7dcf0;font-size:17px;line-height:1.7}
-.ravi-skills{position:relative;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:35px}
-.ravi-skill{padding:10px 18px;border:1px solid rgba(255,255,255,.15);border-radius:30px;color:#fff;background:rgba(255,255,255,.05);transition:.3s}
-.ravi-skill:hover{transform:translateY(-5px);background:rgba(34,92,255,.25);border-color:#225cff}
-.ravi-footer{position:relative;margin-top:40px;color:#7f8aaa;font-size:13px;letter-spacing:2px}
-.ravi-particle{position:absolute;z-index:0;width:5px;height:5px;background:#fff;border-radius:50%;opacity:.4;animation:raviFloat 6s infinite ease-in-out}
-.ravi-p1{left:10%;top:20%}.ravi-p2{left:85%;top:25%;animation-delay:1s}.ravi-p3{left:20%;top:80%;animation-delay:2s}.ravi-p4{left:75%;top:75%;animation-delay:3s}
-@keyframes raviFloat{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(-30px);opacity:.8}}
-@media(max-width:600px){.ravi-poster{padding:50px 22px}.ravi-role{font-size:16px;letter-spacing:1.5px}.ravi-description{font-size:15px}}
+/* ===== CLASS GALLERY ===== */
+.gallery-section{background:#080d24}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-item{position:relative;overflow:hidden;border-radius:18px;border:1px solid #ffffff20;background:#101735;cursor:pointer;transition:.3s}
+.gallery-item:hover{transform:translateY(-6px);border-color:#225cff;box-shadow:0 15px 35px #0008}
+.gallery-item img{width:100%;height:280px;object-fit:cover;display:block;transition:.4s}
+.gallery-item:hover img{transform:scale(1.06)}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gallery-grid{grid-template-columns:1fr}.gallery-item img{height:240px}}
 
 </style></head>
 <body>
@@ -52,20 +40,20 @@ footer{background:#03050d;text-align:center;padding:30px;color:#aeb7d0}
 <header class="hero"><div class="container hero-grid"><div><span class="tag">🤖 FUTURE-READY AI SKILLS</span><h1>AI <span class="mastery">MASTERY</span><br>PROGRAM</h1><h3>LEARN • PRACTICE • BUILD • EARN</h3><p>AI tools, practical projects, YouTube training, creative skills and career-focused learning in one powerful program.</p><div class="actions"><a class="btn gold" href="https://docs.google.com/forms/d/e/1FAIpQLSesdKWiHu8fZ94u2dM2k0cYCzaycrjGXbdLbQQZaGvEnjxH-A/viewform?usp=header" target="_blank" rel="noopener">🔥 REGISTER TODAY</a><a class="btn blue" href="#fees">VIEW FEES</a></div></div><div class="ai-card"><div class="orb">AI</div><h2>Build Your Future 🚀</h2><p>Learn practical AI and digital skills.</p><div class="mini-grid"><div class="mini">🤖 AI Tools</div><div class="mini">🎬 Editing</div><div class="mini">🎨 Design</div><div class="mini">▶ YouTube</div><div class="mini">👤 Branding</div><div class="mini">💼 Career</div></div></div></div></header>
 <section id="courses"><div class="container"><div class="title"><h2>🔥 WHAT WILL YOU LEARN?</h2><p>Modern skills with practical learning.</p></div><div class="skills"><div class="skill"><div class="i">🤖</div><h3>AI Basic to Advanced</h3><p>Useful AI tools and workflows.</p></div><div class="skill"><div class="i">🎬</div><h3>Basic Video Editing</h3><p>Create smarter video content.</p></div><div class="skill"><div class="i">🎨</div><h3>Graphic Designing</h3><p>Create attractive visual content.</p></div><div class="skill"><div class="i">👤</div><h3>Personal Branding</h3><p>Build your digital identity.</p></div><div class="skill"><div class="i">▶️</div><h3>YouTube Training</h3><p>Content and channel learning.</p></div><div class="skill"><div class="i">🛠️</div><h3>Practical Projects</h3><p>Practice with projects.</p></div><div class="skill"><div class="i">📈</div><h3>Skill Growth</h3><p>Professional skill development.</p></div><div class="skill"><div class="i">🚀</div><h3>20+ More Skills</h3><p>Explore more digital modules.</p></div></div></div></section>
 
-<!-- ===== Ravi Kumar Prajapati Poster ===== -->
-<section class="ravi-poster-wrap" id="ravi-poster">
-<div class="ravi-particle ravi-p1"></div><div class="ravi-particle ravi-p2"></div>
-<div class="ravi-particle ravi-p3"></div><div class="ravi-particle ravi-p4"></div>
-<div class="ravi-poster">
-<div class="ravi-name">Ravi Kumar</div>
-<div class="ravi-role">VIDEO EDITOR • GRAPHIC DESIGNER</div>
-<div class="ravi-line"></div>
-<div class="ravi-description">Turning creative ideas into powerful visuals, engaging motion graphics and memorable digital experiences.</div>
-<div class="ravi-skills">
-<div class="ravi-skill">Motion Graphics</div><div class="ravi-skill">Video Editing</div>
-<div class="ravi-skill">Graphic Design</div><div class="ravi-skill">Creative Visuals</div>
+<!-- ===== CLASS GALLERY ===== -->
+<section class="gallery-section">
+<div class="container">
+<div class="title">
+<h2>📸 OUR CLASS GALLERY</h2>
+<p>Memories, learning and practical experiences.</p>
 </div>
-<div class="ravi-footer">CREATE • DESIGN • EDIT • IMPACT</div>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="class-01.jpeg.jpeg" alt="AI Mastery Class"></div>
+<div class="gallery-item"><img src="class-02.jpeg.jpeg" alt="AI Mastery Class"></div>
+<div class="gallery-item"><img src="class-03.jpeg.jpeg" alt="AI Mastery Class"></div>
+<div class="gallery-item"><img src="class-04.jpeg.jpeg" alt="AI Mastery Class"></div>
+<div class="gallery-item"><img src="class-05.jpeg.jpeg" alt="AI Mastery Class"></div>
+</div>
 </div>
 </section>
 
